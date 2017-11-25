@@ -58,6 +58,7 @@ BEGIN
                                         email_body_, 
                                         subject_ => email_subject_, 
                                         attach_ => file_name_);
+         INSERT INTO msds_attach_event_log_clt VALUES (SYS_GUID(), file_name_, SYSDATE, to_email_list_, SYSDATE);
       END IF;
    END IF;
 END;
